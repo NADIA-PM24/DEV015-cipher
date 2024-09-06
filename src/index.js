@@ -11,15 +11,15 @@ encodeButton.addEventListener("click", () => {
     const inputText = inputTextElement.value;
     //const codificarTexto = cipher.encodeText(codificarTexto);
     const encodeText = cipher.encode(3,inputText); 
-    console.log(encodeText); //tal vez la función no esta retornando el resultado
+    outputTextElement.value = encodeText; //tal vez la función no esta retornando el resultado
 });
 
 
 decodeButton.addEventListener("click", () => {
         const outputText = outputTextElement.value;
         //const decodificarTexto = cipher.decodeText(decodificarTexto)
-        const decodeText = cipher.decode(outputText);
-        console.log(decodeText)
+        const decodeText = cipher.decode(3,outputText);
+        inputTextElement.value = decodeText;
 
     });
 
